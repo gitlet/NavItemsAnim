@@ -17,7 +17,6 @@ body {
     body .container .menu {
       list-style-type: none;
       text-align: center;
-      background: rgba(33, 210, 156, 0.8);
       border-radius: 0 0 5px 5px;
       position: absolute;
       top: 0;
@@ -25,19 +24,35 @@ body {
       right: 20px; }
       body .container .menu > li {
         display: inline-block;
-        padding: 10px; }
+        background: #12d68e;
+        margin: 0 -1px; }
         body .container .menu > li a {
           text-decoration: none;
-          color: inherit; }
+          color: whitesmoke; }
           body .container .menu > li a h2 {
-            font-size: 18px; }
+            font-size: 18px;
+            padding: 10px 25px; }
         body .container .menu > li .inner-list {
-          list-style-type: none;
-          display: none; }
+          list-style-type: none; }
           body .container .menu > li .inner-list > li {
-            display: block; }
+            display: block;
+            margin: 1px 0;
+            padding: 10px 20px;
+            background: #199c66; }
+            body .container .menu > li .inner-list > li h4 {
+              font-size: 14px;
+              color: whitesmoke;
+              padding: 5px 10px; }
+            body .container .menu > li .inner-list > li:hover {
+              background: rgba(0, 0, 0, 0.48);
+              transition: background ease 0.5s;
+              cursor: pointer; }
         body .container .menu > li:hover {
-          background: rgba(0, 0, 0, 0.22);
-          transition: background linear 1s; }
+          background: #1c5641;
+          transition: background ease 0.5s; }
+
+@media only screen and (max-width: 520px) {
+  body .container .menu > li {
+    display: block; } }
 
 /*# sourceMappingURL=master.css.map */
