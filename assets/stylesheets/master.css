@@ -1,0 +1,43 @@
+* {
+  margin: auto;
+  padding: 0; }
+
+body {
+  font-family: "Slabo 27px", serif; }
+  body header {
+    background: #1b1b1b;
+    text-align: center; }
+    body header a {
+      text-decoration: none; }
+    body header h1 {
+      color: dimgray;
+      padding: 20px; }
+  body .container {
+    position: relative; }
+    body .container .menu {
+      list-style-type: none;
+      text-align: center;
+      background: rgba(33, 210, 156, 0.8);
+      border-radius: 0 0 5px 5px;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px; }
+      body .container .menu > li {
+        display: inline-block;
+        padding: 10px; }
+        body .container .menu > li a {
+          text-decoration: none;
+          color: inherit; }
+          body .container .menu > li a h2 {
+            font-size: 18px; }
+        body .container .menu > li .inner-list {
+          list-style-type: none;
+          display: none; }
+          body .container .menu > li .inner-list > li {
+            display: block; }
+        body .container .menu > li:hover {
+          background: rgba(0, 0, 0, 0.22);
+          transition: background linear 1s; }
+
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,43 @@
+// importing bourbon
+@import "bourbon/bourbon"
+// initial reset
+*
+  margin: auto
+  padding: 0
+body
+  font-family: 'Slabo 27px', serif
+  header
+    background: shade(#444, 60%)
+    text-align: center
+    a
+      text-decoration: none
+    h1
+      color: dimgray
+      padding: 20px
+  .container
+    position: relative
+    .menu
+      list-style-type: none
+      text-align: center
+      background: rgba(33, 210, 156, 0.8)
+      border-radius: 0 0 5px 5px
+      position: absolute
+      top: 0
+      left: 20px
+      right: 20px
+      >li
+        display: inline-block
+        padding: 10px
+        a
+          text-decoration: none
+          color: inherit
+          h2
+            font-size: 18px
+        .inner-list
+          list-style-type: none
+          display: none
+          >li
+            display: block
+        &:hover
+          background: rgba(0, 0, 0, 0.22)
+          transition: background linear 1s
