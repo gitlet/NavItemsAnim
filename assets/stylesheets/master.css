@@ -15,6 +15,13 @@ body {
   body .container {
     position: relative;
     text-align: center; }
+    body .container p {
+      background: #428ab5;
+      border-radius: 4px;
+      color: aliceblue;
+      text-align: center;
+      margin: 5px;
+      padding: 10px; }
     body .container .menu {
       list-style-type: none;
       text-align: center;
@@ -115,8 +122,8 @@ body .spinners .google-spinner {
   position: relative;
   top: 20px;
   border: 4px solid dimgrey;
-  height: 48px;
-  width: 48px;
+  height: 32px;
+  width: 32px;
   border-top: 6px solid #1f7abb;
   border-right: 6px solid #19d45b;
   border-bottom: 6px solid gold;
@@ -160,6 +167,9 @@ body .spinners .spinner-two {
   0% {
     transform: rotate(0deg);
     transition: transform ease 0.5s; } }
+@keyframes spinerTwo {
+  0% {
+    opacity: 0.4; } }
 @-webkit-keyframes rotYaxis {
   0% {
     transform: rotateY(0deg);
