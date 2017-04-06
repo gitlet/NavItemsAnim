@@ -114,8 +114,8 @@ body
     h2, p
       color: dimgrey
       text-align: center
-
-    // ######### [ SPINNERS ] #########
+// ######### [ SPINNERS ] #########
+body
   .spinners
     text-align: center
     >div
@@ -134,7 +134,7 @@ body
       position: relative
       top: 20px
       border: 4px solid dimgrey
-      @include size(48px)
+      @include size(32px)
       border-top: 6px solid #1f7abb
       border-right: 6px solid #19d45b
       border-bottom: 6px solid gold
@@ -142,31 +142,24 @@ body
       border-radius: 100%
       -webkit-animation: spinBars 2s ease infinite
       animation: spinBars 2s ease infinite
-// SPINNER - 2: CIRCLES
+// SPINNER - 2: SQUARES
 body
   .spinners
-    .spinner-two
+    .squares
       position: relative
       top: 20px
-      @include size(48px)
-      // border: 4px solid #444
-      margin: 10px auto
-      text-align: center
-      line-height: 1em
-      div
+      // border: 1px solid #444
+      @include size(40px)
+      >div
+        background: #000
         @include size(20px)
-        background: rgba(0, 0, 0, 0.15)
-        border-radius: 100%
         display: inline-block
-        padding: 1px
-      #inner-div-1
-        animation: blur1 2s ease-in-out infinite 4s
-      #inner-div-2
-        animation: blur2 2s ease-in-out infinite 3s
-      #inner-div-3
-        animation: blur3 2s ease-in-out infinite 2s
-      #inner-div-4
-        animation: blur4 2s ease-in-out infinite 1s
+        margin: -2px -0.99px
+        position: absolute
+        top: 2px
+        left: 1px
+        -webkit-animation: blinkSquares 2s ease-in-out infinite 1s
+        animation: blinkSquares 2s ease-in-out infinite 1s
 // SPINNER - 3: CLOCK
 body
   .spinners
@@ -176,15 +169,15 @@ body
       margin-bottom: 10px
       border: 4px solid crimson
       border-radius: 100%
-      @include size(48px)
+      @include size(32px)
       text-align: center
       &::before
         content: ""
         background: crimson
-        @include size(4px 25px)
+        @include size(3px 15px)
         position: absolute
         top: 2px
-        left: 22px
+        left: 15px
         border-radius: 20px
         // transform: rotate(90deg)
         animation: ticking 2s ease-in-out infinite
@@ -198,9 +191,57 @@ body
       position: relative
       top: 20px
       img
-        @include size(48px)
+        @include size(32px)
         -webkit-animation: heartBeat 2s ease .5s infinite
         animation: heartBeat 2s ease .5s infinite
+
+// ##---------------->> [ ANIMATED SUBSCRIBE FORM ] <<----------------##
+body
+  .wrapper
+    position: relative
+    top: 40px
+    // border: 1px solid #333
+    @include size(auto)
+    margin-bottom: 40px
+    h1
+      background: shade(#444, 60%)
+      text-align: center
+      color: dimgray
+      padding: 20px
+    .subsForm
+      position: relative
+      top: 15px
+      background: linear-gradient(to left, #3bf5a7, #37bee6)
+      border-radius: 4px
+      color: ghostwhite
+      padding: 10px
+      @include size(400px auto)
+      text-align: center
+      p
+        font-weight: bold
+      input
+        padding: 10px
+        border-radius: 4px
+        border: 0
+      #subsBtn
+        background: dodgerblue
+        border-radius: 4px
+        padding: 10px 20px
+        color: ghostwhite
+        font-weight: bold
+        text-align: center
+        @include size(150px auto)
+        margin-top: 10px
+        cursor: pointer
+        box-shadow: 0px 5px 10px -3px #163242
+        // transform: rotateX(0deg)
+        // transition: transform ease-in-out 1s
+// UNIQUE CLASS TO ADD ONCE USER CLICKS THE BTN:
+// .wobble
+//   -webkit-transform: scale(0.8, 0.8)
+//   -webkit-transition: transform ease-in-out 0.5s
+//   transform: scale(0.8, 0.8)
+//   transition: transform ease-in-out 0.5s
 
 // ####### [ ANIMATIONS ] #######
 // ANIMATING GOOGLE SPINNER
@@ -224,51 +265,41 @@ body
   0%
     transform: rotate(0deg)
     transition: transform ease .5s
-// ANIMATING CIRCLES:
-@-webkit-keyframes blur
-  @keyframes blur1
-    0%
-      opacity: 0.2
-    100%
-      opacity: 1
-@keyframes blur1
-  0%
-    opacity: 0.2
-  100%
+// ANIMATING SQUARES:
+@-webkit-keyframes blinkSquares
+  0%, 100%
+    // transform: translate(none)
+    // transition: transform ease .5s
     opacity: 1
-// blur2:
-@-webkit-keyframes blur2
-  0%
-    opacity: 0.4
-  100%
-    opacity: 1
-@keyframes blur2
-  0%
-    opacity: 0.4
-  100%
-    opacity: 1
-// blur3:
-@-webkit-keyframes blur3
-  0%
+  30%
+    transform: translateX(21px)
+    transition: transform ease .5s
     opacity: 0.6
-  100%
+  60%
+    transform: translate(21px, 21px)
+    transition: transform ease .5s
+    opacity: 0.4
+  90%
+    transform: translateY(21px)
+    transition: transform ease .5s
+    opacity: 0.1
+@keyframes blinkSquares
+  0%, 100%
+    // transform: translate(none)
+    // transition: transform ease .5s
     opacity: 1
-@keyframes blur3
-  0%
+  30%
+    transform: translateX(21px)
+    transition: transform ease .5s
     opacity: 0.6
-  100%
-    opacity: 1
-// blur4:
-@-webkit-keyframes blur4
-  0%
-    opacity: 0.8
-  100%
-    opacity: 1
-@keyframes blur4
-  0%
-    opacity: 0.8
-  100%
-    opacity: 1
+  60%
+    transform: translate(21px, 21px)
+    transition: transform ease .5s
+    opacity: 0.4
+  90%
+    transform: translateY(21px)
+    transition: transform ease .5s
+    opacity: 0.1
 // ANIMATING CLOCK
 @-webkit-keyframes ticking
   0%
@@ -351,7 +382,6 @@ body
     -webkit-transition: transform ease 1s
     transition: transform ease 1s
     opacity: 1
-
 // ########## ANIMATING INNER LI - HOME LIST #####################
 @-webkit-keyframes homeList
   0%
@@ -371,7 +401,6 @@ body
     opacity: 1
     -webkit-transform: rotateY(0deg) translateY(0px)
     transform: rotateY(0deg) translateY(0px)
-
 // ########## ANIMATING INNER LI - ABOUT LIST #####################
 @-webkit-keyframes aboutList
   0%
@@ -391,7 +420,6 @@ body
     opacity: 1
     -webkit-transform: rotateX(0deg) scale(1, 1)
     transform: rotateX(0deg) scale(1, 1)
-
 // ########## ANIMATING INNER LI - CONTACT LIST #####################
 @-webkit-keyframes contactList
   0%
@@ -411,7 +439,6 @@ body
     opacity: 1
     -webkit-transform: translateY(0px) rotateX(0deg)
     transform: translateY(0px) rotateX(0deg)
-
 // ########## ANIMATING INNER LI - SIGN-UP LIST #####################
 @-webkit-keyframes signupList
   0%
@@ -431,9 +458,6 @@ body
     opacity: 1
     -webkit-transform: translateX(0px) rotate(0deg)
     transform: translateX(0px) rotate(0deg)
-
-
-
 
 // ########### [ MEDIA QUERIES ] ###########
 @media only screen and (max-width: 380px)
