@@ -10,18 +10,28 @@ body {
     body header a {
       text-decoration: none; }
     body header h1 {
-      color: dimgray;
+      color: darkgray;
       padding: 20px; }
   body .container {
     position: relative;
     text-align: center; }
     body .container p {
-      background: #428ab5;
+      background: #f1f1f1;
       border-radius: 4px;
-      color: aliceblue;
+      color: rgba(75, 76, 80, 0.68);
       text-align: center;
       margin: 5px;
-      padding: 10px; }
+      padding: 10px;
+      font-weight: bold; }
+    body .container h1 {
+      border: 3px solid dimgrey;
+      text-align: center;
+      color: dimgray;
+      margin: 10px auto;
+      padding: 10px;
+      width: 200px;
+      font-size: 18px;
+      letter-spacing: 0.15em; }
     body .container .menu {
       list-style-type: none;
       text-align: center;
@@ -137,10 +147,14 @@ body .spinners {
     margin: 10px;
     vertical-align: top; }
   body .spinners h1 {
-    background: #1b1b1b;
+    border: 3px solid dimgrey;
     text-align: center;
     color: dimgray;
-    padding: 20px; }
+    padding: 10px;
+    width: 200px;
+    font-size: 18px;
+    margin: 10px auto;
+    letter-spacing: 0.05em; }
 
 body .spinners .google-spinner {
   position: relative;
@@ -152,13 +166,12 @@ body .spinners .google-spinner {
   border-right: 6px solid #19d45b;
   border-bottom: 6px solid gold;
   border-left: 6px solid red;
-  border-radius: 100%;
-  -webkit-animation: spinBars 2s ease infinite;
-  animation: spinBars 2s ease infinite; }
+  border-radius: 100%; }
 
 body .spinners .squares {
   position: relative;
   top: 20px;
+  background: rgba(234, 234, 234, 0.19);
   height: 40px;
   width: 40px; }
   body .spinners .squares > div {
@@ -169,29 +182,27 @@ body .spinners .squares {
     margin: -2px -0.99px;
     position: absolute;
     top: 2px;
-    left: 1px;
-    -webkit-animation: blinkSquares 2s ease-in-out infinite 1s;
-    animation: blinkSquares 2s ease-in-out infinite 1s; }
+    left: 1px; }
 
 body .spinners .clock {
   position: relative;
   top: 20px;
   margin-bottom: 10px;
-  border: 4px solid crimson;
+  border: 4px solid rgba(53, 156, 94, 0.82);
   border-radius: 100%;
   height: 32px;
   width: 32px;
-  text-align: center; }
+  text-align: center;
+  padding: 5px; }
   body .spinners .clock::before {
     content: "";
-    background: crimson;
-    height: 15px;
-    width: 3px;
+    background: rgba(53, 156, 94, 0.82);
+    height: 20px;
+    width: 4px;
     position: absolute;
     top: 2px;
-    left: 15px;
-    border-radius: 20px;
-    animation: ticking 2s ease-in-out infinite; }
+    left: 19px;
+    border-radius: 20px; }
 
 body .spinners {
   text-align: center; }
@@ -200,9 +211,7 @@ body .spinners {
     top: 20px; }
     body .spinners #heart-beating img {
       height: 32px;
-      width: 32px;
-      -webkit-animation: heartBeat 2s ease 0.5s infinite;
-      animation: heartBeat 2s ease 0.5s infinite; }
+      width: 32px; }
 
 body .wrapper {
   position: relative;
@@ -211,17 +220,21 @@ body .wrapper {
   width: auto;
   margin-bottom: 40px; }
   body .wrapper h1 {
-    background: #1b1b1b;
+    border: 3px solid dimgrey;
     text-align: center;
     color: dimgray;
-    padding: 20px; }
+    padding: 10px;
+    width: 240px;
+    font-size: 18px;
+    margin: 10px auto;
+    letter-spacing: 0.05em; }
   body .wrapper .subsForm {
     position: relative;
     top: 15px;
     background: linear-gradient(to left, #3bf5a7, #37bee6);
     border-radius: 4px;
     color: ghostwhite;
-    padding: 10px;
+    padding: 20px 10px 40px 10px;
     height: auto;
     width: 400px;
     text-align: center; }
@@ -242,7 +255,75 @@ body .wrapper {
       width: 150px;
       margin-top: 10px;
       cursor: pointer;
-      box-shadow: 0px 5px 10px -3px #163242; }
+      box-shadow: 0px 12px 20px -10px #0d1113; }
+
+.wobble {
+  transform: translate(0.8, 0.8);
+  transition: transform ease-in-out 1s; }
+
+body #scaling-elems {
+  position: relative;
+  top: 20px; }
+  body #scaling-elems h1 {
+    border: 3px solid dimgrey;
+    text-align: center;
+    color: dimgray;
+    padding: 10px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 0.05em; }
+  body #scaling-elems .wrapper {
+    position: relative;
+    top: 40px;
+    height: auto;
+    width: auto;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: #e2e5ec; }
+    body #scaling-elems .wrapper input[type="text"]#input_search {
+      border: none;
+      outline: none;
+      padding: 10px;
+      background: #c4cbd6;
+      border-radius: 0.25em; }
+
+.scale_width {
+  width: 240px;
+  -webkit-transition: width ease-in-out 1s;
+  transition: width ease-in-out 1s; }
+
+body #vertical_sliders {
+  position: relative;
+  top: 40px; }
+  body #vertical_sliders h1 {
+    border: 3px solid dimgrey;
+    text-align: center;
+    color: dimgray;
+    padding: 10px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 0.05em; }
+  body #vertical_sliders .content {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 4px 0; }
+    body #vertical_sliders .content h4 {
+      background: #efefef;
+      padding: 10px; }
+    body #vertical_sliders .content span {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-weight: bold; }
+      body #vertical_sliders .content span a {
+        text-decoration: none;
+        color: inherit; }
+    body #vertical_sliders .content p {
+      margin: 5px;
+      padding: 5px;
+      text-align: justify;
+      display: none; }
 
 @-webkit-keyframes spinBars {
   0% {
@@ -270,62 +351,54 @@ body .wrapper {
   30% {
     transform: translateX(21px);
     transition: transform ease 0.5s;
-    opacity: 0.6; }
+    opacity: 0.6;
+    background: aqua; }
   60% {
     transform: translate(21px, 21px);
     transition: transform ease 0.5s;
-    opacity: 0.4; }
+    opacity: 0.4;
+    background: cyan; }
   90% {
     transform: translateY(21px);
     transition: transform ease 0.5s;
-    opacity: 0.1; } }
+    opacity: 0.1;
+    background: turquoise; } }
 @keyframes blinkSquares {
   0%, 100% {
     opacity: 1; }
   30% {
     transform: translateX(21px);
     transition: transform ease 0.5s;
-    opacity: 0.6; }
+    opacity: 0.6;
+    background: aqua; }
   60% {
     transform: translate(21px, 21px);
     transition: transform ease 0.5s;
-    opacity: 0.4; }
+    opacity: 0.4;
+    background: cyan; }
   90% {
     transform: translateY(21px);
     transition: transform ease 0.5s;
-    opacity: 0.1; } }
+    opacity: 0.1;
+    background: turquoise; } }
 @-webkit-keyframes ticking {
   0% {
     transform: rotate(0deg);
     transform-origin: bottom center;
     transition: transform ease 1s; }
-  25% {
-    background: gold; }
-  50% {
-    background: dodgerblue; }
-  75% {
-    background: coral; }
   100% {
     transform: rotate(360deg);
     transform-origin: bottom center;
-    transition: transform ease 1s;
-    background: crimson; } }
+    transition: transform ease 1s; } }
 @keyframes ticking {
   0% {
     transform: rotate(0deg);
     transform-origin: bottom center;
     transition: transform ease 1s; }
-  25% {
-    background: gold; }
-  50% {
-    background: dodgerblue; }
-  75% {
-    background: coral; }
   100% {
     transform: rotate(360deg);
     transform-origin: bottom center;
-    transition: transform ease 1s;
-    background: gold; } }
+    transition: transform ease 1s; } }
 @-webkit-keyframes heartBeat {
   0%, 100% {
     transform: scale(0.5, 0.5);
